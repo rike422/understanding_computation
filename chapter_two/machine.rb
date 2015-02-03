@@ -1,3 +1,4 @@
+require './classes/class.rb'
 class Machine < Struct.new(:expression)
   def step
     self.expression = expression.reduce
