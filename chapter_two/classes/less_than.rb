@@ -20,9 +20,9 @@ class LessThan
 
   def reduce
     if left.reducible?
-      LessThan.new(left.reduce, right)
+      LessThan.new(left.reduce(env), right)
     elsif right.reducible?
-      LessThan.new(left, right.reduce)
+      LessThan.new(left, right.reduce(env))
     else
       Boolean.new(left.value < right.value)
     end

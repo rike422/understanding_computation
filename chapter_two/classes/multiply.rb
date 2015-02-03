@@ -18,11 +18,11 @@ class Multiply
     !reducible?
   end
 
-  def reduce
+  def reduce(env)
     if left.reducible?
-      Multiply.new(left.reduce, right)
+      Multiply.new(left.reduce(env), right)
     elsif right.reducible?
-      Multiply.new(left, right.reduce)
+      Multiply.new(left, right.reduce(env))
     else
       Number.new(left.value + right.value)
     end

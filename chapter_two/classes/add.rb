@@ -20,9 +20,9 @@ class Add
 
   def reduce
     if left.reducible?
-      Add.new(left.reduce, right)
+      Add.new(left.reduce(env), right)
     elsif right.reducible?
-      Add.new(left, right.reduce)
+      Add.new(left, right.reduce(env))
     else
       Number.new(left.value + right.value)
     end

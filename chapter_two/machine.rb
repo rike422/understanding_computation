@@ -1,7 +1,7 @@
 require './classes/class.rb'
-class Machine < Struct.new(:expression)
+class Machine < Struct.new(:expression, :environment)
   def step
-    self.expression = expression.reduce
+    self.expression = expression.reduce(environment)
   end
 
   def run

@@ -18,11 +18,11 @@ class MoreThan
     !reducible?
   end
 
-  def reduce
+  def reduce(env)
     if left.reducible?
-      MoreThan.new(left.reduce, right)
+      MoreThan.new(left.reduce(env), right)
     elsif right.reducible?
-      MoreThan.new(left, right.reduce)
+      MoreThan.new(left, right.reduce(env))
     else
       Boolean.new(left.value > right.value)
     end
