@@ -1,4 +1,5 @@
 require_relative 'variable.rb'
+require_relative 'do_nothing.rb'
 require_relative 'add.rb'
 require_relative 'multiply.rb'
 require_relative 'number.rb'
