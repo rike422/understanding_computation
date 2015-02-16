@@ -19,3 +19,4 @@ class If < Struct.new(:condition, :consequence, :alternative)
       end
     end
   end
+end

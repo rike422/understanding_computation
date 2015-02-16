@@ -18,5 +18,6 @@ class Seaquence < Struct.new(:first, :second)
     else
       reduced_first, reduced_env = first.reduce(env)
       [Seaquence.new(reduced_first, second), reduced_env]
+    end
   end
 end
