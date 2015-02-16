@@ -13,4 +13,8 @@ class Boolean
   def reducible?
     false
   end
+
+  def atom?
+    !reducible?
+  end
 end

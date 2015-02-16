@@ -12,7 +12,7 @@ class Variable < Struct.new(:name)
   end
 
   def atom?
-    !reducible?
+   !reducible?
   end
 
   def reduce(env)
