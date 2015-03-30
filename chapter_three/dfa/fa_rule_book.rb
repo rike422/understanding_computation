@@ -1,9 +1,9 @@
 class DFARuleBook < Struct.new(:rules)
-  def next_state(state, charactor)
-    rule_for(state, charactor).follow
+  def next_state(state, character)
+    rule_for(state, character).follow
   end
 
-  def rule_for(state, charactor)
-    rules.reduce { |rule| rule.applies_to?(state, charactor) }
+  def rule_for(state, character)
+    rules.reduce { |rule| rule.applies_to?(state, character) }
   end
 end
